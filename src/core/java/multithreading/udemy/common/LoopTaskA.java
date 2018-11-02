@@ -1,4 +1,4 @@
-package core.java.udemy.multithreading.common;
+package core.java.multithreading.udemy.common;
 
 import java.util.concurrent.TimeUnit;
 

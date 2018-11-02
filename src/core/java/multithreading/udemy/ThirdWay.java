@@ -1,23 +1,24 @@
-package core.java.udemy.multithreading;
+package core.java.multithreading.udemy;
 
 import java.util.concurrent.TimeUnit;
 
-public class FourthWay {
+public class ThirdWay {
 	
 	public static void main(String[] args) {
 		System.out.println("Main Thread Start");
 		
-		new Thread(new FourthTask()).start();
+		new ThirdTask();
 		
 		/*
-		 * Most widely used way of creating a Thread which helps to create a thread and
-		 * store the reference of the thread in a variable thereby enables to do future
-		 * operations on Thread. one more Advantage is it keeps the Thread Operations
-		 * Class separate.
+		 * Here the below method of creating a new object of ThirdClass to a reference
+		 * variable can't be done when we implement Runnable Interface. This proves that
+		 * we should implement runnable only when we dont need to perform more
+		 * operations on thread reference variable t3 after creating a thread.
 		 */
+		/*ThirdClass t3 = new ThirdClass();
+		t3.start*/
 		
-		Thread t4 = new Thread (new FourthTask());
-		t4.start();
+		new ThirdTask();
 		
 		System.out.println("Main Thread End");
 	}
@@ -29,7 +30,7 @@ public class FourthWay {
  * @author pandehar
  *
  */
-class FourthTask implements Runnable {
+class ThirdTask implements Runnable {
 	
 	private static int count = 0;
 	private int id;
@@ -46,8 +47,9 @@ class FourthTask implements Runnable {
 		}
 	}
 	
-	public FourthTask() {
+	public ThirdTask() {
 		this.id = ++count;
+		new Thread(this).start();
 	}
 
 }

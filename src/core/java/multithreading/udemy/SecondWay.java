@@ -1,20 +1,22 @@
-package core.java.udemy.multithreading;
+package core.java.multithreading.udemy;
 
 import java.util.concurrent.TimeUnit;
 
-public class FirstWay {
+public class SecondWay {
 	
 	public static void main(String[] args) {
 		System.out.println("Main Thread Start");
 		
-		new FirstTask();
-		Thread t2 = new FirstTask();
+		new SecondTask().start();
+		
+		Thread t2 = new SecondTask();
+		t2.start();
 		
 		System.out.println("Main Thread End");
 	}
 }
 
-class FirstTask extends Thread {
+class SecondTask extends Thread {
 	
 	private static int count = 0;
 	private int id;
@@ -32,9 +34,8 @@ class FirstTask extends Thread {
 		}
 	}
 	
-	public FirstTask() {
+	public SecondTask() {
 		this.id = ++count;
-		this.start();
 	}
 
 }

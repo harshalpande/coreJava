@@ -1,9 +1,9 @@
-package core.java.udemy.multithreading.executor;
+package core.java.multithreading.udemy.executor;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import core.java.udemy.multithreading.common.LoopTaskA;
+import core.java.multithreading.udemy.common.LoopTaskA;
 
 public class SingleExecutorExample {
 
