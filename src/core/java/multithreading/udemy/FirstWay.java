@@ -8,6 +8,7 @@ public class FirstWay {
 		System.out.println("Main Thread Start");
 		
 		new FirstTask();
+		@SuppressWarnings("unused")
 		Thread t2 = new FirstTask();
 		
 		System.out.println("Main Thread End");

@@ -32,6 +32,7 @@ public class BasicThreadStopping {
 		Runner t1 = new Runner();
 				t1.start();
 		
+		@SuppressWarnings("resource")
 		Scanner scan = new Scanner(System.in);
 		
 		scan.nextLine();
