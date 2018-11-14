@@ -6,16 +6,13 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-import java.util.concurrent.FutureTask;
 
 public class FutureAndCallableExample {
 
 	public static void main(String[] args) {
 
 		ExecutorService executorService = Executors.newCachedThreadPool();
-		
-		
-		
+
 		Callable<Integer> callableInnerClass = new Callable<Integer>() {
 
 			@Override
@@ -30,16 +27,13 @@ public class FutureAndCallableExample {
 				return duration;
 			}
 		};
-		
+
 		Future<Integer> future = executorService.submit(callableInnerClass);
-		
+
 		try {
 			System.out.println(future.get());
 		} catch (InterruptedException | ExecutionException e) {
 			e.printStackTrace();
 		}
-		
-		
 	}
-
 }
