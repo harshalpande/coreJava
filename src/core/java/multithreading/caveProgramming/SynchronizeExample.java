@@ -36,7 +36,7 @@ public class SynchronizeExample {
 		t1.start();
 		t2.start();
 
-		// main thread starts another thread t1 and t2 and continues printing line 47
+		// main thread starts another thread t1 and t2 and continues printing line 49
 		// sysout, hence count = 0, join is required because it allows that the new
 		// thread gets joined to main thread thereby completing the task.
 
