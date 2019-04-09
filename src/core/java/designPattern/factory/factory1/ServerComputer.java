@@ -1,4 +1,4 @@
-package core.java.designPattern.factory;
+package core.java.designPattern.factory.factory1;
 
 public class ServerComputer extends ComputerAbstract{
 	
