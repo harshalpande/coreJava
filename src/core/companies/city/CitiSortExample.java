@@ -2,7 +2,7 @@ package core.companies.city;
 
 /**
  * Given a Array of length n which contains only 3 literals '1', '2' and '3'
- * Arrange them such that 1 goes to left, and 3 goes to right for e.g.
+ * Arrange them such that 1 goes to left, and 2 goes to right for e.g.
  * 231323112321 ==> 111133332222 `
  * 
  * @author Harshal S Pande
