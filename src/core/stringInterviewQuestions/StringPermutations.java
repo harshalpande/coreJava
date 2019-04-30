@@ -9,6 +9,10 @@ public class StringPermutations {
 		permutation("", input);
 	}
 
+	/**
+	 * @param perm
+	 * @param word
+	 */
 	private static void permutation(String perm, String word) {
 		if (word.isEmpty()) {
 			System.err.println(perm + word);
