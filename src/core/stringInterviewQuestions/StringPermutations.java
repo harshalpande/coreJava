@@ -2,7 +2,7 @@ package core.stringInterviewQuestions;
 
 public class StringPermutations {
 	public static void main(String args[]) {
-		permutation("abc");
+		permutation("harsh");
 	}
 
 	public static void permutation(String input) {
