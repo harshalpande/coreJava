@@ -1,4 +1,4 @@
-package core.java.designPattern.abstractfactory;
+package core.java.designPattern.abstractfactory.abstractfactory1;
 
 public class BankFactory extends AbstractFactory {
 

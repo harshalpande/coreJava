@@ -10,7 +10,9 @@ public class SingletonExample {
 
 	public static SingletonExample getInstance() {
 		if (INSTANCE == null)
-			return new SingletonExample();
+			synchronized (INSTANCE) {
+				return new SingletonExample();
+			}
 		return INSTANCE;
 	}
 	

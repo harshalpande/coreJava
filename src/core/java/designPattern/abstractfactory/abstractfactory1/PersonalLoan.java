@@ -1,6 +1,6 @@
-package core.java.designPattern.abstractfactory;
+package core.java.designPattern.abstractfactory.abstractfactory1;
 
-public class HousingLoan extends Loan{
+public class PersonalLoan extends Loan{
 
 	@Override
 	void setInterestRate(double rate) {
@@ -9,7 +9,7 @@ public class HousingLoan extends Loan{
 
 	@Override
 	String getName() {
-		super.name = "Housing";
+		super.name = "Personal";
 		return name;
 	}
 
