@@ -36,7 +36,8 @@ public class ReentrantLockExample {
 		Thread.sleep(1000);
 		lock.lock();
 		System.out.println("Enter Return Key");
-		new Scanner(System.in).nextLine();
+		Scanner scanner = new Scanner(System.in);
+		scanner.nextLine();
 		System.out.println("Return Key pressed");
 		
 		cond.signal();
@@ -46,6 +47,7 @@ public class ReentrantLockExample {
 		} finally {
 			lock.unlock();
 		}
+		scanner.close();
 	}
 
 	public void finished() {

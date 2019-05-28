@@ -39,5 +39,6 @@ public class Practice {
 		}
 		// outputString.append(tempvar).append(String.valueOf(count));
 		System.out.println(outputString.toString());
+		scannerObj.close();
 	}
 }
