@@ -22,28 +22,23 @@ public class ChainOfResponsibilityImpl {
 		} else {
 
 			Notes thousandNote = new ThousandNote();
-			amount = thousandNote.amount(amount);
-
 			Notes hundredNote = new HundredNote();
-			hundredNote = thousandNote.next(hundredNote);
-			amount = hundredNote.amount(amount);
-
 			Notes fiftyNote = new FiftyNote();
-			fiftyNote = hundredNote.next(fiftyNote);
-			amount = fiftyNote.amount(amount);
-
 			Notes twentyNote = new TwentyNote();
-			twentyNote = fiftyNote.next(twentyNote);
-			amount = twentyNote.amount(amount);
-
 			Notes tenNote = new TenNote();
-			tenNote = twentyNote.next(tenNote);
-			amount = tenNote.amount(amount);
+
+			// Assign the Next Responsible in the chain
+			thousandNote.next(hundredNote);
+			hundredNote.next(fiftyNote);
+			fiftyNote.next(twentyNote);
+			twentyNote.next(tenNote);
+
+			// Perform the operation only on the first responsible
+			thousandNote.amount(amount); 
 
 			System.out.println("Transaction Completed. Do Visit us again.");
 		}
 		scanner.close();
-
 	}
 
 }

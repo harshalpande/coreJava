@@ -86,6 +86,5 @@ public class LinkedList<T> implements Iterable<T>{
 			current = current.next;
 			return item;
 		}
-		
 	}
 }
